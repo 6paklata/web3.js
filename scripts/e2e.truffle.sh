@@ -14,7 +14,6 @@ npm run geth
 # Install truffle
 git clone https://github.com/trufflesuite/truffle.git
 cd truffle
-yarn bootstrap
 
 # @truffle/contract
 cd packages/contract
@@ -25,6 +24,8 @@ yarn remove web3
 npm install web3@e2e \
   --registry http://localhost:4873 \
   --force
+
+npm run bootstrap -- --hoist
 
 # Geth tests
 GETH=true npm test
